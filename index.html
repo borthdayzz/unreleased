@@ -1,0 +1,574 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unreleased Albums</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li.album {
+            background-color: #eee;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 18px;
+            display: flex;
+            align-items: flex-start;
+        }
+        li img {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        .album-info {
+            flex-grow: 1;
+        }
+        .album-details {
+            cursor: pointer;
+        }
+        .album-details h2 {
+            margin: 0;
+            color: #555;
+        }
+        .album-details p {
+            margin: 5px 0 0;
+            color: #777;
+        }
+        .songs {
+            margin-top: 10px;
+            display: none;
+            padding-left: 20px;
+        }
+        .songs li {
+            background-color: #ddd;
+            margin: 5px 0;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .message {
+            margin-top: 10px;
+            color: red;
+            font-weight: bold;
+        }
+        video {
+            width: 100%;
+            max-width: 500px;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Unreleased Albums</h1>
+        <ul>
+            <!-- I AM MUSIC -->
+            <li class="album">
+                <img src="images/IAMMUSIC.png" alt="I AM MUSIC">
+                <div class="album-info">
+                    <div class="album-details" onclick="toggleSongs(this)">
+                        <h2>I AM MUSIC</h2>
+                        <p>Artist: Playboi Carti</p>
+                        <p>Expected Release Date: 2024</p>
+                    </div>
+                    <ul class="songs">
+                        <li onclick="playSong('music/IAMMUSIC/2024.mp3')">2024</li>
+                        <li onclick="playSong('music/IAMMUSIC/BACKR00MS.mp3')">BACKR00MS</li>
+                        <li onclick="playSong('music/IAMMUSIC/EVILJ0RDAN.mp3')">EVILJ0RDAN</li>
+                        <li onclick="playSong('music/IAMMUSIC/H00DBYAIR.mp3')">H00DBYAIR</li>
+                        <li onclick="playSong('music/IAMMUSIC/KETAMINE.mp3')">KETAMINE</li>
+                        <li onclick="playSong('music/IAMMUSIC/EVILJ0RDAN REMIX.mp3')">EVILJ0RDAN (BONUS REMIX)</li>
+                    </ul>
+                </div>
+            </li>
+            <!-- VULTURES 2 DELUXE -->
+            <li class="album">
+                <img src="images/VULTURES 2.png" alt="VULTURES 2 DELUXE">
+                <div class="album-info">
+                    <div class="album-details" onclick="toggleSongs(this)">
+                        <h2>VULTURES 2 (DELUXE)</h2>
+                        <p>Artist: ¥$, Kanye West, Ty Dolla $ign</p>
+                        <p>Expected Release Date: TBD</p>
+                    </div>
+                    <ul class="songs">
+                        <li onclick="playSong('music/VULTURES 2 (DELUXE)/TAKE OFF YOUR DRESS.mp3')">TAKE OFF YOUR DRESS</li>
+                        <li onclick="playSong('music/VULTURES 2 (DELUXE)/CAN U BE.mp3')">CAN U BE</li>
+                        <li onclick="playSong('music/VULTURES 2 (DELUXE)/BELIEVER.mp3')">BELIEVER</li>
+                        <li onclick="playSong('music/VULTURES 2 (DELUXE)/DRUNK.mp3')">DRUNK</li>
+                        <li onclick="playSong('music/VULTURES 2 (DELUXE)/GUN TO MY HEAD.mp3')">GUN TO MY HEAD</li>
+                    </ul>
+                </div>
+            </li>
+            <!-- VULTURES 3 -->
+            <li class="album">
+                <img src="images/VULTURES 3.png" alt="VULTURES 3">
+                <div class="album-info">
+                    <div class="album-details" onclick="toggleSongs(this)">
+                        <h2>VULTURES 3</h2>
+                        <p>Artist: ¥$, Kanye West, Ty Dolla $ign</p>
+                        <p>Expected Release Date: TBD</p>
+                    </div>
+                    <ul class="songs">
+                        <li onclick="playSong('')">SO CALLED FRIENDS (Ft. Freddie Gibbs)</li>
+                        <li onclick="playSong('')">DON'T KILL THE PARTY (Ft. Tyga)</li>
+                        <li onclick="playSong('')">CROCODILE</li>
+                        <li onclick="playSong('')">UNLOCK</li>
+                        <li onclick="playSong('')">APEROL SPRITZ (Ft. Ant Clemons)</li>
+                        <li onclick="playSong('')">CITY UNDERGROUND</li>
+                        <li onclick="playSong('')">GONE</li>
+                        <li onclick="playSong('')">LOVE AGAIN</li>
+                        <li onclick="playSong('')">LOVE LOVE LOVE</li>
+                    </ul>
+                </div>
+            </li>
+            <!-- HURRY UP TOMORROW -->
+            <li class="album">
+                <img src="images/HURRY UP TOMORROW.jpg" alt="HURRY UP TOMORROW">
+                <div class="album-info">
+                    <div class="album-details" onclick="toggleSongs(this)">
+                        <h2>HURRY UP TOMORROW</h2>
+                        <p>Artist: The Weeknd</p>
+                        <p>Expected Release Date: TBD</p>
+                    </div>
+                    <ul class="songs">
+                        <li onclick="playMedia('music/HURRY UP TOMORROW/Dancing In The Flames.mp4', true)">Dancing In The Flames</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <ul class="albums-list">
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>TBA</h2>
+                        <p>Artist: 50 Cent</p>
+                        <p>Record Label: TBA</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>Don't Be Dumb</h2>
+                        <p>Artist: A$AP Rocky</p>
+                        <p>Record Label: ASAP Worldwide, Polo Grounds Music, RCA Records</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>TBA</h2>
+                        <p>Artist: Ab-Soul</p>
+                        <p>Record Label: Top Dawg Entertainment</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>Mastery</h2>
+                        <p>Artist: Adil Omar</p>
+                        <p>Record Label: TBA</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>TBA</h2>
+                        <p>Artist: Anuel AA & Ozuna</p>
+                        <p>Record Label: Real Hasta la Muerte, Aura Music</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>TBA</h2>
+                        <p>Artist: Armani White</p>
+                        <p>Record Label: Def Jam Recordings</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>Child with Wolves</h2>
+                        <p>Artist: Baby Keem</p>
+                        <p>Record Label: PgLang, Columbia Records</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>TBA</h2>
+                        <p>Artist: Beastie Boys</p>
+                        <p>Record Label: TBA</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>TBA</h2>
+                        <p>Artist: Benny the Butcher & 38 Spesh</p>
+                        <p>Record Label: 5 to 50, Def Jam Recordings, T.C.F. Music Group</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>Heart of the Streets 3</h2>
+                        <p>Artist: B.G.</p>
+                        <p>Record Label: Chopper Brick Records</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>Ready to Live</h2>
+                        <p>Artist: Bobby Shmurda</p>
+                        <p>Record Label: GS9, ONErpm</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>The Bricktionary</h2>
+                        <p>Artist: Boldy James & Harry Fraud</p>
+                        <p>Record Label: TBA</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>Drug Dilla</h2>
+                        <p>Artist: Boldy James & J Dilla</p>
+                        <p>Record Label: TBA</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>TBA</h2>
+                        <p>Artist: Bone Thugs-n-Harmony</p>
+                        <p>Record Label: TBA</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>TBA</h2>
+                        <p>Artist: Boosie Badazz & B.G.</p>
+                        <p>Record Label: TBA</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>Before 30</h2>
+                        <p>Artist: Bow Wow</p>
+                        <p>Record Label: LBW</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>No Sign of Weakness</h2>
+                        <p>Artist: Burna Boy</p>
+                        <p>Record Label: Spaceship, Bad Habit, Atlantic</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>TBA</h2>
+                        <p>Artist: Cardi B</p>
+                        <p>Record Label: Atlantic Records</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>TBA</h2>
+                        <p>Artist: Central Cee</p>
+                        <p>Record Label: Live Yours</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>Star Line Gallery</h2>
+                        <p>Artist: Chance the Rapper</p>
+                        <p>Record Label: TBA</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>Let God Sort Em Out</h2>
+                        <p>Artist: Clipse</p>
+                        <p>Record Label: Def Jam Recordings</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>TBA</h2>
+                        <p>Artist: Consequence</p>
+                        <p>Record Label: TBA</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>Won't He Do It: Side B</h2>
+                        <p>Artist: Conway the Machine</p>
+                        <p>Record Label: Drumwork Music Group, EMPIRE</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>TBA</h2>
+                        <p>Artist: Conway the Machine & J.U.S.T.I.C.E. League</p>
+                        <p>Record Label: Empire Distribution</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>Long Live Coolio</h2>
+                        <p>Artist: Coolio</p>
+                        <p>Record Label: Tommy Boy Records</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>Ghetto Superstar</h2>
+                        <p>Artist: DaBaby</p>
+                        <p>Record Label: South Coast Music Group, Interscope</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>365</h2>
+                        <p>Artist: Damon Dash & Freeway</p>
+                        <p>Record Label: TBA</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>AOI3</h2>
+                        <p>Artist: De La Soul</p>
+                        <p>Record Label: TBA</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>Good & Bad</h2>
+                        <p>Artist: Desiigner</p>
+                        <p>Record Label: TBA</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>In My Prime</h2>
+                        <p>Artist: Drake</p>
+                        <p>Record Label: OVO Sound, Republic Records</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>TBA</h2>
+                        <p>Artist: Fat Joe & DJ Khaled</p>
+                        <p>Record Label: TBA</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>Spencer</h2>
+                        <p>Artist: G-Eazy</p>
+                        <p>Record Label: BPG</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>Evergreen</h2>
+                        <p>Artist: Gucci Mane</p>
+                        <p>Record Label: 1017 Records, Atlantic</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>Deluxe</h2>
+                        <p>Artist: Lil Yachty</p>
+                        <p>Record Label: Quality Control Music, Motown</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>Private Party</h2>
+                        <p>Artist: Migos</p>
+                        <p>Record Label: Quality Control Music, Capitol Records</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>Little Man</h2>
+                        <p>Artist: Pusha T</p>
+                        <p>Record Label: TBA</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>Ghetto Funk</h2>
+                        <p>Artist: Post Malone</p>
+                        <p>Record Label: Republic Records</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>The Incredible LP</h2>
+                        <p>Artist: Quavo</p>
+                        <p>Record Label: Quality Control Music, Capitol Records</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>Made in America</h2>
+                        <p>Artist: Royce da 5'9"</p>
+                        <p>Record Label: TBA</p>
+                    </div>
+                </div>
+            </li>
+            <li class="album">
+                <div class="album-info">
+                    <div class="album-details">
+                        <h2>Neon Nights</h2>
+                        <p>Artist: The Weeknd</p>
+                        <p>Record Label: XO, Republic Records</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        
+        
+
+        <audio id="audioPlayer" controls style="display:none;"></audio>
+        <video id="videoPlayer" controls style="display:none;"></video>
+
+        <div id="messageBox" class="message"></div>
+    </div>
+
+    <script>
+        function toggleSongs(albumDetails) {
+            const songsList = albumDetails.parentNode.querySelector('.songs');
+            if (songsList.style.display === 'none' || songsList.style.display === '') {
+                songsList.style.display = 'block';
+            } else {
+                songsList.style.display = 'none';
+            }
+        }
+
+        function playMedia(mediaUrl, isVideo) {
+            const audioPlayer = document.getElementById('audioPlayer');
+            const videoPlayer = document.getElementById('videoPlayer');
+            const messageBox = document.getElementById('messageBox');
+
+            if (isVideo) {
+                videoPlayer.src = mediaUrl;
+                videoPlayer.style.display = 'block';
+                audioPlayer.style.display = 'none';
+                videoPlayer.play();
+            } else {
+                audioPlayer.src = mediaUrl;
+                audioPlayer.style.display = 'block';
+                videoPlayer.style.display = 'none';
+                audioPlayer.play();
+            }
+            messageBox.textContent = '';
+        }
+
+        function playSong(songUrl) {
+            if (songUrl) {
+                playMedia(songUrl, false);
+            } else {
+                const messageBox = document.getElementById('messageBox');
+                messageBox.textContent = 'This song isn\'t leaked yet!';
+                document.getElementById('audioPlayer').style.display = 'none';
+                document.getElementById('videoPlayer').style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
